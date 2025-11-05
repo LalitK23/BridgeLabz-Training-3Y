@@ -1,0 +1,103 @@
+/* =============================
+   PAGE SETUP
+============================= */
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f8f9fa;
+  margin: 0;
+  text-align: center;
+  padding: 30px;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* Flex container to center both boxes */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* =============================
+   BOX MODEL VISUALIZATION
+============================= */
+.box {
+  width: 250px;
+  height: 250px;
+  background-color: #fdfdfe; /* content area */
+  padding: 20px; /* padding layer */
+  border: 8px solid #007bff; /* border layer */
+  margin: 20px; /* margin layer */
+  outline: 2px dashed #6c757d; /* visualize margin boundary */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.inner-content {
+  background-color: #ffc107;
+  padding: 15px;
+  height: 100%;
+  box-sizing: content-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 8px;
+  color: #333;
+}
+
+/* =============================
+   DEFAULT MODEL (content-box)
+============================= */
+.default-box .inner-content {
+  background-color: #ffe066;
+}
+
+/* =============================
+   BORDER-BOX MODEL
+============================= */
+.border-box {
+  box-sizing: border-box;
+  background-color: #e0f7fa;
+  border-color: #17a2b8;
+}
+
+.border-box .inner-content {
+  box-sizing: border-box;
+  background-color: #5bc0de;
+  color: white;
+}
+
+/* =============================
+   HOVER EFFECT
+============================= */
+.box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* =============================
+   DESCRIPTIVE TEXT
+============================= */
+.desc {
+  max-width: 250px;
+  font-size: 0.9rem;
+  color: #555;
+  margin: 10px auto;
+  line-height: 1.5;
+}
+
+/* =============================
+   FOOTER
+============================= */
+footer {
+  margin-top: 40px;
+  color: #6c757d;
+  font-size: 0.9rem;
+}

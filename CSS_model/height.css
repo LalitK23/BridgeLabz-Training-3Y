@@ -1,0 +1,69 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(120deg, #f1f3f5, #dee2e6);
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* Flex container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  width: 90%;
+}
+
+/* Common box styling */
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 12px;
+  overflow: auto; /* Demonstrate overflow control */
+}
+
+/* Box 1: fixed px values */
+.box1 {
+  width: 200px;
+  height: 150px;
+  background-color: #007bff;
+}
+
+/* Box 2: percentage width */
+.box2 {
+  width: 40%;
+  height: 100px;
+  background-color: #28a745;
+  min-height: 80px;
+  max-width: 400px; /* Demonstrate max-width */
+}
+
+/* Box 3: vh and em units */
+.box3 {
+  width: 20vw;
+  height: 10em;
+  background-color: #ffc107;
+  min-height: 100px; /* Demonstrate min-height */
+}
+
+/* Hover effect to visualize space better */
+.box:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}

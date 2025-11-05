@@ -1,0 +1,114 @@
+/* =============================
+   GENERAL PAGE STYLING
+============================= */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  margin: 0;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* =============================
+   FORM CONTAINER
+============================= */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 320px;
+}
+
+/* =============================
+   FORM ELEMENTS
+============================= */
+label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #555;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  outline-style: solid;         /* Demonstrate outline */
+  outline-color: transparent;   /* Hidden by default */
+  outline-offset: 4px;          /* Gap between element and outline */
+  transition: all 0.3s ease;
+}
+
+/* =============================
+   OUTLINE STYLES ON FOCUS
+============================= */
+
+/* Blue outline with offset for text input */
+input[type="text"]:focus {
+  outline-color: #007bff;
+  outline-width: 3px;
+  outline-offset: 3px;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Green outline for email input */
+input[type="email"]:focus {
+  outline-color: #28a745;
+  outline-style: dashed;
+  outline-offset: 4px;
+  box-shadow: 0 0 8px rgba(40, 167, 69, 0.3);
+}
+
+/* Orange double outline for textarea */
+textarea:focus {
+  outline-color: #ffc107;
+  outline-style: double;
+  outline-width: 4px;
+  outline-offset: 5px;
+  box-shadow: 0 0 8px rgba(255, 193, 7, 0.3);
+}
+
+/* =============================
+   BUTTON STYLING
+============================= */
+button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* =============================
+   FOOTER
+============================= */
+footer {
+  margin-top: 40px;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
