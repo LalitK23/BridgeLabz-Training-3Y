@@ -1,0 +1,120 @@
+/* ===============================
+   Filter Comparison Layout
+   =============================== */
+
+/* ----- Global Reset and Styling ----- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f0f8ff, #ffffff);
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ----- Header Section ----- */
+header {
+  background-color: #0078d7;
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0 0 10px;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+/* ----- Main Comparison Section ----- */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.comparison-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* ----- Image Card Styling ----- */
+.image-card {
+  text-align: center;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  flex: 1 1 500px;
+}
+
+.image-card img {
+  width: 100%;
+  display: block;
+  transition: filter 0.5s ease;
+}
+
+/* Filtered Image Effect */
+.filtered img {
+  filter: brightness(60%);
+}
+
+/* On hover, remove filter smoothly */
+.filtered:hover img {
+  filter: none;
+}
+
+/* Captions */
+figcaption {
+  background-color: #f5f5f5;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  border-top: 1px solid #ddd;
+}
+
+/* Hover Lift Effect */
+.image-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ----- Footer Section ----- */
+footer {
+  background-color: #0078d7;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 0.9rem;
+}
+
+/* ----- Responsive Design Below 700px ----- */
+@media (max-width: 700px) {
+  .comparison-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .image-card {
+    width: 90%;
+  }
+
+  figcaption {
+    font-size: 0.95rem;
+  }
+}

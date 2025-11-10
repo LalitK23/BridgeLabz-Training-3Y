@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive CSS Cheat Sheet</title>
+  <link rel="stylesheet" href="cheatsheet.css">
+</head>
+<body>
+
+  <!-- ===== Header Section ===== -->
+  <header>
+    <h1>📘 Responsive CSS Cheat Sheet</h1>
+    <p>Quick reference for key Responsive Web Design concepts</p>
+  </header>
+
+  <!-- ===== Main Content Section ===== -->
+  <main>
+    <section class="grid-container">
+
+      <!-- Box 1: Filters -->
+      <article class="cheat-box">
+        <h2>🎨 Filters</h2>
+        <p>
+          CSS filters like <code>grayscale(100%)</code>, <code>blur(4px)</code>, and
+          <code>sepia(80%)</code> adjust visual effects directly on images.
+          <br><br>
+          Example: <code>img { filter: brightness(1.2); }</code>
+        </p>
+      </article>
+
+      <!-- Box 2: Media Queries -->
+      <article class="cheat-box">
+        <h2>📱 Media Queries</h2>
+        <p>
+          Used to apply CSS rules depending on device width or orientation.
+          <br><br>
+          Example: <code>@media (max-width: 600px) { body { font-size: 14px; } }</code>
+        </p>
+      </article>
+
+      <!-- Box 3: Responsive Design -->
+      <article class="cheat-box">
+        <h2>🌐 Responsive Design</h2>
+        <p>
+          Uses flexible layouts, images, and media queries to adapt to various screen sizes.
+          <br><br>
+          Example: <code>grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));</code>
+        </p>
+      </article>
+
+      <!-- Box 4: Typography -->
+      <article class="cheat-box">
+        <h2>🖋️ Typography</h2>
+        <p>
+          Use relative units and <code>clamp()</code> to make font sizes scalable.
+          <br><br>
+          Example: <code>font-size: clamp(1rem, 2vw, 1.5rem);</code>
+        </p>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- ===== Footer Section ===== -->
+  <footer>
+    <p>© 2025 Responsive CSS Cheat Sheet | Designed with ❤️ using HTML & CSS</p>
+  </footer>
+
+</body>
+</html>

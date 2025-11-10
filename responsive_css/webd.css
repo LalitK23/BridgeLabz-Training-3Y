@@ -1,0 +1,120 @@
+/* ===============================
+   Responsive Web Design Layout
+   =============================== */
+
+/* ----- Global Styling ----- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #e3f2fd, #ffffff);
+  color: #333;
+}
+
+/* ----- Header Section ----- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #0078d7;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #d1eaff;
+}
+
+/* ----- Main Section ----- */
+main {
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.feature-box {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  flex: 1 1 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.feature-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.feature-box h2 {
+  color: #0078d7;
+  margin-bottom: 10px;
+}
+
+/* ----- Footer Section ----- */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #0078d7;
+  color: white;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+/* ----- Responsive Design ----- */
+@media (max-width: 750px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-box {
+    width: 90%;
+  }
+}

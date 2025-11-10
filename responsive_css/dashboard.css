@@ -1,0 +1,173 @@
+/* ===============================
+   Responsive Dashboard Summary
+   =============================== */
+
+/* ----- Global Reset & Styling ----- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f0f8ff, #ffffff);
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ----- Header Section ----- */
+.header {
+  background-color: #0078d7;
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  animation: fadeDown 0.8s ease;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+/* ----- Dashboard Grid Layout ----- */
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 20px;
+  padding: 30px;
+  flex: 1;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  animation: slideIn 1s ease;
+}
+
+.sidebar h2 {
+  color: #0078d7;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+  color: #0078d7;
+}
+
+/* ----- Main Content Styling ----- */
+.main-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+/* Individual Cards */
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+}
+
+.card h3 {
+  color: #0078d7;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Hover Effect on Cards */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* ----- Animations ----- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* ----- Footer Section ----- */
+.footer {
+  background-color: #0078d7;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+/* ----- Responsive Design Below 750px ----- */
+@media (max-width: 750px) {
+  .dashboard-container {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    order: -1;
+    text-align: center;
+  }
+
+  .sidebar ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
