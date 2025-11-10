@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selectors Practice Page</title>
+  <link rel="stylesheet" href="selectors.css">
+</head>
+<body>
+
+  <header>
+    <h1>CSS Selectors Practice Page</h1>
+    <p>Learn how different selectors target HTML elements!</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>1️⃣ Element Selector Example</h2>
+      <p>This is a simple paragraph styled using an <b>element selector</b>.</p>
+      <p>All paragraphs share the same base style.</p>
+    </section>
+
+    <section>
+      <h2>2️⃣ Class Selector Example</h2>
+      <p class="highlight">This text uses a <b>class selector (.highlight)</b> to stand out!</p>
+      <p class="highlight">Class selectors can style multiple elements at once.</p>
+    </section>
+
+    <section>
+      <h2>3️⃣ ID Selector Example</h2>
+      <p id="unique-text">This line uses an <b>ID selector (#unique-text)</b> to style one unique element.</p>
+    </section>
+
+    <section>
+      <h2>4️⃣ Attribute Selector Example</h2>
+      <a href="https://www.google.com" target="_blank">Google</a>
+      <a href="https://www.wikipedia.org">Wikipedia</a>
+      <a href="#">Placeholder Link</a>
+      <p>Links that open in a new tab have a special style (using attribute selector).</p>
+    </section>
+
+    <section>
+      <h2>5️⃣ Combinator Selectors Example</h2>
+
+      <div class="parent">
+        <p>Child paragraph (direct child of .parent → styled using <b>child combinator > </b>)</p>
+        <div>
+          <p>Descendant paragraph (styled using <b>descendant combinator</b>)</p>
+        </div>
+      </div>
+
+      <h3>Sibling Selectors</h3>
+      <p>First paragraph — normal style</p>
+      <p>Second paragraph — styled using <b>adjacent sibling (+)</b></p>
+      <p>Third paragraph — styled using <b>general sibling (~)</b></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with ❤️ for CSS Practice | © 2025</p>
+  </footer>
+
+</body>
+</html>

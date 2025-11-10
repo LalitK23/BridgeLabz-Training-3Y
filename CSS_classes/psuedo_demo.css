@@ -1,0 +1,95 @@
+/* General Styling */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f8ff;
+  color: #333;
+  margin: 40px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 40px;
+}
+
+/* Flexbox Layout */
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.example {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 220px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* :hover Example */
+.hover-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2196f3;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.hover-link:hover {
+  background-color: #0b79d0;
+}
+
+/* :focus Example */
+.focus-input {
+  padding: 10px;
+  border: 2px solid gray;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.focus-input:focus {
+  border-color: #4caf50;
+  background: #e8f5e9;
+}
+
+/* :active Example */
+.active-btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ff9800;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.active-btn:active {
+  transform: scale(0.95);
+  background-color: #e68900;
+}
+
+/* :nth-child Example */
+.nth-list {
+  list-style: none;
+  padding: 0;
+}
+
+.nth-list li {
+  padding: 5px;
+  background: #eee;
+  margin: 3px 0;
+  border-radius: 5px;
+}
+
+.nth-list li:nth-child(odd) {
+  background-color: #c8e6c9;
+}
+
+.nth-list li:nth-child(even) {
+  background-color: #ffcdd2;
+}

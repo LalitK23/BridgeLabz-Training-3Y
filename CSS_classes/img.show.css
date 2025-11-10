@@ -1,0 +1,79 @@
+/* Basic Page Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f4f7fa;
+  color: #333;
+  margin: 0;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 40px;
+}
+
+/* Grid Layout for the Image Showcase */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Each Image Card */
+.image-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  background: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image Styling */
+.image-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect: Zoom + Dark Overlay */
+.image-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.3s ease-in-out;
+  border-radius: 15px;
+}
+
+.image-card:hover img {
+  transform: scale(1.1);
+}
+
+.image-card:hover::after {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Captions Below Images */
+figcaption {
+  padding: 10px 0 15px;
+  font-size: 1rem;
+  color: #333;
+  background: #fff;
+  font-weight: 500;
+  border-radius: 0 0 15px 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}

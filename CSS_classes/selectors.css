@@ -1,0 +1,97 @@
+/* ========== Basic Page Layout ========== */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f7faff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background-color: #0078d7;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+main {
+  padding: 20px 50px;
+  line-height: 1.6;
+}
+
+section {
+  background: white;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ========== Element Selector ========== */
+/* Targets all paragraph elements */
+p {
+  color: #444;
+  font-size: 1rem;
+}
+
+/* ========== Class Selector ========== */
+/* Targets elements with class="highlight" */
+.highlight {
+  background-color: #fffae6;
+  border-left: 5px solid #ffc107;
+  padding: 10px;
+}
+
+/* ========== ID Selector ========== */
+/* Targets the element with id="unique-text" */
+#unique-text {
+  background-color: #e0f7fa;
+  color: #006064;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* ========== Attribute Selector ========== */
+/* Targets links that open in a new tab (target="_blank") */
+a[target="_blank"] {
+  color: #0078d7;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Hover effect for all links */
+a:hover {
+  color: #0056a3;
+}
+
+/* ========== Combinator Selectors ========== */
+/* Child combinator: selects direct <p> children of .parent */
+.parent > p {
+  background-color: #e3f2fd;
+  border-left: 4px solid #2196f3;
+  padding: 8px;
+}
+
+/* Descendant combinator: selects <p> inside any level within .parent */
+.parent p {
+  margin-top: 8px;
+}
+
+/* Adjacent sibling: selects the <p> immediately after an <h3> */
+h3 + p {
+  background: #fff3cd;
+  padding: 8px;
+  border-left: 4px solid #ff9800;
+}
+
+/* General sibling: selects all <p> after an <h3> */
+h3 ~ p {
+  color: #6a1b9a;
+}
+
+/* ========== Footer ========== */
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}

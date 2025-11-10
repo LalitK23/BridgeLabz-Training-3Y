@@ -1,0 +1,83 @@
+/* ========== Page Layout ========== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f0f8ff, #d1e8ff);
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  color: #333;
+}
+
+h1 {
+  margin-bottom: 40px;
+}
+
+/* Container */
+.animation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Caption text below each animation */
+.caption {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* ========== 1️⃣ Moving Box Animation ========== */
+.box {
+  width: 80px;
+  height: 80px;
+  background-color: #0078d7;
+  border-radius: 10px;
+  animation: moveBox 3s ease-in-out infinite alternate;
+}
+
+/* Define animation keyframes for moving box */
+@keyframes moveBox {
+  0% { transform: translateX(-100px); background-color: #0078d7; }
+  50% { transform: translateX(100px); background-color: #00bcd4; }
+  100% { transform: translateX(-100px); background-color: #4caf50; }
+}
+
+/* ========== 2️⃣ Bouncing Ball Animation ========== */
+.ball {
+  width: 60px;
+  height: 60px;
+  background-color: #ff5252;
+  border-radius: 50%;
+  position: relative;
+  animation: bounce 2s cubic-bezier(.28,.84,.42,1) infinite;
+  animation-delay: 0.5s;
+}
+
+/* Define keyframes for bounce */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-150px); }
+}
+
+/* ========== 3️⃣ Color Changing Text Animation ========== */
+.color-text {
+  font-size: 2rem;
+  font-weight: bold;
+  animation: colorShift 4s linear infinite alternate;
+  animation-delay: 1s;
+}
+
+/* Define keyframes for text color change */
+@keyframes colorShift {
+  0% { color: #e91e63; letter-spacing: 0px; }
+  25% { color: #ff9800; letter-spacing: 2px; }
+  50% { color: #4caf50; letter-spacing: 4px; }
+  75% { color: #2196f3; letter-spacing: 2px; }
+  100% { color: #9c27b0; letter-spacing: 0px; }
+}

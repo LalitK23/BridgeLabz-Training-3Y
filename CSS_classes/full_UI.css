@@ -1,0 +1,171 @@
+/* ====== Global Settings ====== */
+* {
+  box-sizing: border-box; /* Consistent box model */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e3f2fd, #ffffff);
+  color: #333;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ====== Header ====== */
+header {
+  background-color: #0078d7;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* ====== Main Card ====== */
+.main-card {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+/* Card Container Style */
+.main-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  margin: 40px auto;
+  width: 80%;
+  max-width: 900px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
+}
+
+/* ====== Left Content (Image) ====== */
+.left-content img {
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.left-content img:hover {
+  transform: scale(1.05);
+}
+
+/* ====== Right Content (Form) ====== */
+.right-content {
+  max-width: 400px;
+}
+
+h2 {
+  color: #0078d7;
+  margin-bottom: 20px;
+}
+
+/* Form Elements */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: 500;
+}
+
+input {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  border-color: #0078d7;
+  box-shadow: 0 0 6px rgba(0,120,215,0.4);
+  outline: none;
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+/* Button Colors */
+.primary {
+  background-color: #0078d7;
+}
+
+.primary:hover {
+  background-color: #005fa3;
+}
+
+.secondary {
+  background-color: #4caf50;
+}
+
+.secondary:hover {
+  background-color: #388e3c;
+}
+
+/* ====== Footer ====== */
+footer {
+  background-color: #0078d7;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+
+/* ====== Responsive Design ====== */
+@media (max-width: 768px) {
+  .main-card {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .left-content img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

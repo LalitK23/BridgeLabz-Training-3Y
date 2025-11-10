@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box-Sizing Comparison</title>
+  <link rel="stylesheet" href="box.css">
+</head>
+<body>
+
+  <h1>📦 Box-Sizing Comparison Page</h1>
+  <p class="intro">
+    This example compares two boxes: one using the <b>default box-sizing (content-box)</b> and the other using 
+    <b>box-sizing: border-box;</b>.  
+    Notice how padding and borders affect their total width differently.
+  </p>
+
+  <div class="container">
+
+    <!-- Box 1: Default (content-box) -->
+    <div class="box default-box">
+      <h2>Default: content-box</h2>
+      <p>
+        In the <b>default model</b>, padding and border are <b>added to</b> the element's total width and height.
+      </p>
+      <p>Total size = content + padding + border</p>
+    </div>
+
+    <!-- Box 2: border-box -->
+    <div class="box border-box">
+      <h2>box-sizing: border-box;</h2>
+      <p>
+        With <b>border-box</b>, padding and border are <b>included within</b> the defined width and height.
+      </p>
+      <p>Total size = fixed width (no growth from padding)</p>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>Made with ❤️ to understand how box-sizing works</p>
+  </footer>
+
+</body>
+</html>

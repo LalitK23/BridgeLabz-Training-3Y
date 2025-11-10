@@ -1,0 +1,77 @@
+/* General Page Styling */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f8ff;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+
+h1 {
+  margin-bottom: 40px;
+}
+
+/* Container using Flexbox */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Tooltip Base */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Tooltip Text Styling */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 180px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  bottom: 125%; /* Position tooltip above */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none; /* Prevent flicker when moving mouse */
+}
+
+/* Small arrow below tooltip */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+/* Hover effect to show tooltip */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Optional styling for word tooltip */
+.word {
+  font-size: 1.5rem;
+  color: #0078d7;
+  font-weight: 600;
+}
