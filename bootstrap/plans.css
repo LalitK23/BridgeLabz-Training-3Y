@@ -1,0 +1,33 @@
+/* ===== Custom Styling for Pricing Plans ===== */
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Card base style */
+.pricing-card {
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Highlighted plan adjustments */
+.bg-primary .btn-light {
+  border-radius: 25px;
+  font-weight: 600;
+}
+
+.btn-outline-primary {
+  border-radius: 25px;
+  font-weight: 600;
+}
+
+header h2 {
+  font-size: 2rem;
+}

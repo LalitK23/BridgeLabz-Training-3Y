@@ -1,0 +1,37 @@
+/* ===== Custom Styling for Product Catalog ===== */
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Product card hover effect */
+.product-card {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Image styling */
+.card-img-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Button styling */
+.btn-primary {
+  border-radius: 20px;
+  padding: 6px 20px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Header */
+header h1 {
+  font-size: 2rem;
+}

@@ -1,0 +1,31 @@
+/* ===== Custom Styles for Travel Agency Showcase ===== */
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Carousel image settings */
+.carousel-item img {
+  height: 500px;
+  object-fit: cover;
+  filter: brightness(85%);
+}
+
+/* Carousel captions */
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 15px;
+}
+
+/* Progress bar text */
+.progress-bar {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Footer styling */
+footer {
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+}
+

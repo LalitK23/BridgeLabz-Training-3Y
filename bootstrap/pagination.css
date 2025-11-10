@@ -1,0 +1,45 @@
+/* ===== Custom Styling for Blog Pagination ===== */
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Card hover effect */
+.card {
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Pagination styling */
+.pagination .page-link {
+  border-radius: 8px;
+  margin: 0 4px;
+  transition: background-color 0.3s ease;
+}
+
+.pagination .page-link.active {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.pagination .page-link:hover {
+  background-color: #e9ecef;
+}
+
+/* Buttons */
+.btn-outline-secondary {
+  border-radius: 25px;
+  padding: 8px 20px;
+  font-weight: 500;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #6c757d;
+  color: white;
+}
