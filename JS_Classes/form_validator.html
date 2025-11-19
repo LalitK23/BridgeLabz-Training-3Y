@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Form Validator</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+        input {
+            display: block;
+            margin-bottom: 10px;
+            padding: 8px;
+            width: 250px;
+        }
+        .valid {
+            border: 2px solid green;
+        }
+        .invalid {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Student Registration Form</h2>
+
+    <form id="studentForm">
+        <input type="text" id="name" placeholder="Name">
+        <span id="nameError" class="error"></span>
+
+        <input type="text" id="email" placeholder="Email">
+        <span id="emailError" class="error"></span>
+
+        <input type="text" id="phone" placeholder="Phone Number">
+        <span id="phoneError" class="error"></span>
+
+        <input type="password" id="password" placeholder="Password">
+        <span id="passwordError" class="error"></span>
+
+        <button type="submit">Register</button>
+    </form>
+
+
+<script>
+const nameField = document.getElementById("name");
+const emailField = document.getElementById("email");
+const phoneField = document.getElementById("phone");
+const passField = document.getElementById("password");
+
+nameField.addEventListener("input", () => {
+    let regex = /^[A-Za-z ]+$/;
+    validateField(nameField, regex, "nameError", "Name must contain alphabets only");
+});
+
+emailField.addEventListener("input", () => {
+    let regex = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    validateField(emailField, regex, "emailError", "Enter a valid email");
+});
+
+phoneField.addEventListener("input", () => {
+    let regex = /^[0-9]{10}$/;
+    validateField(phoneField, regex, "phoneError", "Phone must be 10 digits");
+});
+
+passField.addEventListener("input", () => {
+    let regex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&+=!]).{6,}$/;
+    validateField(passField, regex, "passwordError", "Password must have 1 uppercase, 1 number, 1 special char");
+});
+
+function validateField(field, regex, errorId, errorMsg) {
+    if (regex.test(field.value)) {
+        field.classList.remove("invalid");
+        field.classList.add("valid");
+        document.getElementById(errorId).innerText = "";
+    } else {
+        field.classList.remove("valid");
+        field.classList.add("invalid");
+        document.getElementById(errorId).innerText = errorMsg;
+    }
+}
+</script>
+
+</body>
+</html>

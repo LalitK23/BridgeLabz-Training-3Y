@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Ticket Booking</title>
+    <style>
+        input {
+            display: block;
+            margin-bottom: 10px;
+            padding: 8px;
+            width: 250px;
+        }
+        .error { color: red; font-size: 14px; }
+        .valid { border: 2px solid green; }
+        .invalid { border: 2px solid red; }
+    </style>
+</head>
+<body>
+
+<h2>Movie Ticket Booking</h2>
+
+<input type="text" id="name" placeholder="Your Name">
+<span id="nameErr" class="error"></span>
+
+<input type="text" id="email" placeholder="Your Email">
+<span id="emailErr" class="error"></span>
+
+<input type="number" id="seats" placeholder="Number of Seats (1-10)">
+<span id="seatErr" class="error"></span>
+
+<button onclick="bookTicket()">Book Ticket</button>
+
+<h3 id="ticketOutput"></h3>
+
+<script>
+function validate(field, regex, errorId, message) {
+    if (regex.test(field.value)) {
+        field.classList.add("valid");
+        field.classList.remove("invalid");
+        document.getElementById(errorId).innerText = "";
+        return true;
+    } else {
+        field.classList.add("invalid");
+        field.classList.remove("valid");
+        document.getElementById(errorId).innerText = message;
+        return false;
+    }
+}
+
+function bookTicket() {
+    let name = document.getElementById("name");
+    let email = document.getElementById("email");
+    let seats = document.getElementById("seats");
+
+    let validName = validate(name, /^[A-Za-z ]+$/, "nameErr", "Only alphabets allowed");
+    let validEmail = validate(email, /^[^ ]+@[^ ]+\.[a-z]{2,3}$/, "emailErr", "Enter valid email");
+    let validSeats = validate(seats, /^([1-9]|10)$/, "seatErr", "Seats must be 1 to 10");
+
+    if (validName && validEmail && validSeats) {
+        let booking = {
+            name: name.value,
+            email: email.value,
+            seats: seats.value
+        };
+
+        document.getElementById("ticketOutput").innerText =
+            `🎟 Ticket Booked!\nName: ${booking.name}\nEmail: ${booking.email}\nSeats: ${booking.seats}`;
+    }
+}
+</script>
+
+</body>
+</html>

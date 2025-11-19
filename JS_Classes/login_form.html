@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form Validation</title>
+    <style>
+        input {
+            display: block;
+            margin-bottom: 10px;
+            padding: 8px;
+            width: 250px;
+        }
+        .error { color: red; font-size: 14px; }
+        .success { color: green; font-size: 16px; font-weight: bold; }
+        .invalid { border: 2px solid red; }
+        .valid { border: 2px solid green; }
+    </style>
+</head>
+<body>
+
+<h2>Login Form</h2>
+
+<input type="text" id="username" placeholder="Username">
+<span id="userErr" class="error"></span>
+
+<input type="password" id="password" placeholder="Password">
+<span id="passErr" class="error"></span>
+
+<button onclick="validateLogin()">Login</button>
+
+<h3 id="output"></h3>
+
+<script>
+function validate(field, regex, errorId, message) {
+    if (regex.test(field.value)) {
+        field.classList.add("valid");
+        field.classList.remove("invalid");
+        document.getElementById(errorId).innerText = "";
+        return true;
+    } else {
+        field.classList.add("invalid");
+        field.classList.remove("valid");
+        document.getElementById(errorId).innerText = message;
+        return false;
+    }
+}
+
+function validateLogin() {
+    let username = document.getElementById("username");
+    let password = document.getElementById("password");
+
+    let userValid = validate(username, /^.{5,}$/, "userErr", "Username must be at least 5 characters");
+    let passValid = validate(password, /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@#$%^&+=!]).{8,}$/, "passErr",
+        "Password must be 8+ chars with upper, lower, number & special char");
+
+    if (userValid && passValid) {
+        document.getElementById("output").innerText = "Login Successful!";
+        document.getElementById("output").className = "success";
+    } else {
+        document.getElementById("output").innerText = "";
+    }
+}
+</script>
+
+</body>
+</html>

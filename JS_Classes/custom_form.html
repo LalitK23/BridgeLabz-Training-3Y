@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Form Builder</title>
+    <style>
+        input, select {
+            display: block;
+            margin-bottom: 10px;
+            padding: 8px;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Dynamic Form Builder</h2>
+
+<div id="formContainer"></div>
+
+<script>
+class FormBuilder {
+    constructor(fields) {
+        this.fields = fields;
+    }
+
+    renderForm(containerId) {
+        let html = "<form id='dynamicForm'>";
+        this.fields.forEach(field => {
+            html += `<label>${field.label}</label>`;
+            html += `<input type="${field.type}" id="${field.label}" placeholder="${field.label}">`;
+        });
+        html += `<button type="button" onclick="form.getFormData()">Submit</button>`;
+        html += "</form>";
+        document.getElementById(containerId).innerHTML = html;
+    }
+
+    getFormData() {
+        let data = {};
+        this.fields.forEach(f => {
+            let key = f.label;
+            let value = document.getElementById(key).value;
+            data[key] = value;
+        });
+        console.log("Form Data:", data);
+        alert(JSON.stringify(data, null, 2));
+        return data;
+    }
+}
+
+const fields = [
+    { type: "text", label: "Username" },
+    { type: "email", label: "Email" },
+    { type: "password", label: "Password" }
+];
+
+const form = new FormBuilder(fields);
+form.renderForm("formContainer");
+</script>
+
+</body>
+</html>
